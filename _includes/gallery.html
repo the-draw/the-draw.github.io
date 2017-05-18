@@ -1,0 +1,16 @@
+{::nomarkdown}
+{% assign piclist = page[include.piclist] %}
+<div class="gallery{% if include.vertical %} vertical{% else %} horizontal{% endif %}">
+  {% if piclist.folder %}{% assign listfolder = piclist.folder | prepend: "/" %}{% endif %}
+  {% for item in piclist.files %}
+  <figure class="image-fig">
+    <a class="mfp-trigger" href="/assets/images{{ listfolder }}/{{ item.file }}">
+      <img src="/assets/images{{ listfolder }}/{% if piclist.all_thumbnailed %}sm-{% endif %}{{ item.file }}" />
+    </a>
+    {% if item.caption %}
+      <figcaption>{{ item.caption | markdownify }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endfor %}
+</div>
+{:/nomarkdown}

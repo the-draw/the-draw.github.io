@@ -1,0 +1,1010 @@
+/**
+ * Site header
+ */
+.site-header {
+  text-align: center;
+  max-width: 100%;
+  p {
+    color: $brand-color;
+    font-family: $title-font-family;
+    margin: 0 auto 15px auto;
+  }
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+
+.mobile-header.site-header {
+  display: none;
+  h1.site-title {
+    margin: 5px auto 0 auto;
+  }
+}
+
+h1.site-title {
+  font-family: $fancy-font-family;
+  letter-spacing: 2px;
+  font-size: 43px;
+  font-weight: 300;
+  line-height: 1;
+  margin: 15px 0;
+
+  a {
+    color: $brand-color;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+/*
+.site-nav {
+  font-family: $title-font-family;
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-list {
+    margin-top: -2px;
+    padding-bottom: 6px; // allows box-shadow to be visible below
+    overflow: hidden;    // stops box-shadow from leaking above
+  }
+
+  .page-link {
+    //list-style-type: none;
+    display: inline-block;
+    color: $grey-color-light;
+    line-height: $base-font-size;
+    margin: 0 5px;
+    padding: 9px 15px;
+    box-shadow: 0 1px 5px #111;
+    border: $green-border;
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+    position: relative;
+
+    &.active {
+      font-color: white;
+      z-index: 2;
+      background-color: $background-color;
+    }
+  }
+
+  @include media-query($on-palm) {
+
+    .page-list {
+      display: none;
+      margin-top: 0;
+    }
+    .page-list.palm-show {
+      display: block;
+    }
+    .menu-icon, .page-link {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      text-align: center;
+      margin: 0;
+      box-shadow: none;
+      border: none;
+      border-bottom: $green-border;
+      background-color: $background-color;
+      line-height: 14px;
+      border-radius: 0;
+
+      > svg path {
+        fill: $grey-color;
+      }
+    }
+    .page-link.active {
+    }
+  }
+}
+*/
+
+
+/**
+ * Site footer
+ */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.site-footer {
+  border-top: $brown-border;
+  color: $text-color-dull;
+  background-color: $footer-background-color;
+  padding: $spacing-unit 0;
+  p + p {
+    margin-top: 10px;
+  }
+  .button {
+    margin: 4px 0;
+  }
+}
+
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footer-col-wrapper {
+  font-size: 15px;
+  color: $grey-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
+}
+
+.footer-col {
+  font-family: $title-font-family;
+  font-size: $small-font-size;
+  float: left;
+  text-align: center;
+  width: 50%;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+@include media-query($on-palm) {
+  .footer-col {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+  padding-top: $spacing-unit/3;
+  flex: 1;
+  // works with body { display: flex; } to expand main to fill available space
+}
+
+.page-heading {
+  font-size: 20px;
+}
+
+.post-meta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.post-link {
+  display: block;
+  font-size: 24px;
+}
+
+/**
+ * Home page
+ */
+
+.whole-post-link {
+  margin-top: $spacing-unit;
+}
+
+/**
+ * Posts
+ */
+article.post {
+  //border: $brown-border;
+  //background-color: $text-background-color;
+  border-left: $base-border;
+  line-height: 1.8;
+  width: 100%;
+}
+img.page-top {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+.post-content, article.comment {
+
+  p:first-child {
+    margin-top: 0;
+  }
+  strong {
+    color: $text-color-bright;
+  }
+  hr {
+    border: 0;
+    border-top: $base-border;
+    margin: $spacing-unit;
+    background-color: transparent;
+  }
+
+  .footnote {
+      &:before {
+          content: '[';
+      }
+      &:after {
+          content: ']';
+      }
+  }
+  // .footnotes (the list) is later down in a more convenient place
+}
+.post-content {
+  figure {
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      max-height: 85vh;
+    }
+  }
+}
+.preview p:last-of-type:after {
+  content: ' …';
+}
+
+p.filing {
+  text-align: center;
+  font-family: $title-font-family;
+  padding-bottom: $spacing-unit;
+}
+
+.post-container {
+  //background-color: $text-background-color;
+  //border-top: 1px solid rgba(0,0,0,.35);
+  padding: 0 40px 40px 40px;
+}
+.meta {
+  text-align: center;
+  font-family: $base-font-family;
+  font-size: $small-font-size;
+  color: $text-color-dull;
+}
+.bio {
+  font-family: $base-font-family;
+  font-size: $small-font-size;
+  color: $text-color-dull;
+  border-top: $base-border;
+  border-bottom: $base-border;
+}
+
+header.post-header {
+  font-family: $title-font-family;
+  em, strong {
+    font-family: $base-font-family;
+    font-size: 95%;
+  }
+  text-align: center;
+  color: $brand-color;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-bottom: $base-border;
+  line-height: 1.2;
+  h1, h1 a {
+    font-size: 26px;
+    color: $brand-color;
+//    font-weight: $base-font-weight;
+  }
+  .subtitle {
+    font-size: 17px;
+    margin: 0 auto;
+  }
+  @include media-query($on-palm){
+    padding: 40px 20px;
+  }
+}
+
+
+@include media-query($on-palm) {
+  .post-container {
+    padding: 0 20px;
+  }
+  article.post .post-title {
+    font-size: 26px;
+  }
+  .post-content {
+    font-size: 12.5px;
+  }
+}
+
+nav.post-to-post-nav {
+  border: $brown-border;
+  background-color: $text-background-color-dark;
+  font-family: $title-font-family;
+  .prev-post, .next-post {
+    span {
+      display: block;
+    }
+    p {
+      margin: 0;
+    }
+    em, strong {
+      font-family: $base-font-family;
+      font-size: 95%;
+    }
+    width: 50%;
+    padding: 5px 15px;
+    display: inline-block;
+  }
+  .next-post {
+    > span:before {
+      content: "« ";
+    }
+    float: left;
+    text-align: left;
+  }
+  .prev-post {
+    > span:after {
+      content: " »";
+    }
+    float: right;
+    text-align: right;
+  }
+  .wayfinding-link {
+    text-align: center;
+    padding: 5px 15px;
+    clear: both;
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+
+/**
+ * Comments - which are rightly a part of Posts,
+ * but need enough CSS of their own that they
+ * get their own section
+ */
+
+// Comment titles.
+.comments-section{
+  h2 {
+    font-family: $title-font-family;
+    font-weight: $base-font-weight;
+    text-align: center;
+    color: $pop-color;
+    text-shadow: 3px 3px 2px #000;
+    line-height: normal;
+  }
+  #comments > h2 {
+    padding: $spacing-unit 0;
+  }
+}
+
+// Comment-to-comment spacing and separator.
+.comment {
+  h3 {
+    margin-top: 0;
+    font-weight: $base-font-weight;
+  }
+  &.child, & + #respond {
+    // #respond doesn't get given any special class when moved
+    // to child positioning, so have to use sibling selector
+    padding-left: $spacing-unit/3;
+    border-left: 5px solid $brand-color-dark;
+    padding-bottom: $spacing-unit;
+    padding-top: $spacing-unit;
+  }
+  &.child + .comment.child {
+    padding-top: 0;
+    margin-top: -20px;
+  }
+}
+.reply-button + .comment,
+.comment.child + .comment.child,
+.reply-button + #respond,
+#comments + #respond,
+.footnotes {
+// footnotes are here just because it's convenient, they're unrelated
+  &:before {
+    display: block;
+    width: 8px; height: 8px;
+    background: $brand-color;
+    border-radius: 50%;
+    margin: 20px auto;
+    content: '';
+  }
+}
+
+#respond {
+  .instruct {
+    font-size: $small-font-size;
+    margin-bottom: $spacing-unit/2;
+  }
+  header {
+    margin-bottom: $spacing-unit;
+    a {
+      display: block;
+      font-weight: $heavy-font-weight;
+      text-align: center;
+    }
+  }
+}
+
+.comment__avatar {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  float: left;
+  margin-right: 5px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.comment__author-name,
+.comment__timestamp {
+  font-family: $title-font-family;
+}
+.comment__content {
+  clear: left;
+  padding: $spacing-unit/3 0;
+}
+a.reply-button {
+  display: inline-block;
+  padding: 3px 10px 3px 10px;
+  background-color: #001a00;
+  font-family: $title-font-family;
+  border: $brand-border-dark;
+  border-left-width: 5px;
+  border-radius: 0 15px 15px 0px;
+}
+#comment-form-submit {
+  font-size: 14px;
+}
+/**
+ * Forms (post comments, /subscribe/)
+ */
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0 0 $spacing-unit/3 0;
+}
+label {
+  font-family: $title-font-family;
+  font-weight: $base-font-weight;
+  color: $pop-color;
+  small {
+    color: $pale-pop-color;
+  }
+}
+textarea, input {
+  font-family: $base-font-family;
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,.25) inset;
+  padding: 5px;
+  border: 1px solid $brown-color;
+  background-color: $text-background-color-dark;
+  font-size: $small-font-size;
+  color: $grey-color-dark;
+  &:disabled {
+    color: rgba(255,255,255,.2);
+  }
+}
+button:disabled {
+  color: rgba(255,255,255,.2);
+  cursor: default;
+}
+textarea.comment-message {
+  width: 100%;
+  font-family: $mono-font-family;
+  display: block;
+}
+.js-notice {
+  text-align: center;
+  display: block;
+  font-family: $title-font-family;
+  strong {
+    font-weight: normal;
+    color: $pale-pop-color;
+  }
+}
+
+/**
+ * Subscribe page
+ */
+.subscribe-form {
+  .gotcha {
+    display: none;
+  }
+}
+
+
+/**
+ * Sidebar
+ */
+.main-content {
+  padding-left: 225px;
+  width: 100%;
+  float: right;
+}
+aside#sidebar {
+  width: 225px;
+  margin-right: -225px;
+  float: left;
+  position: relative;
+  z-index: 1;
+  section.mobile-controls {
+    display: none;
+  }
+  section.mainnav > div {
+    display: block;
+    padding: 5px 13px;
+    margin: 0 10px;
+    color: $brand-color-dark;
+    &.main-listing {
+      border-bottom: $base-border;
+      .child {
+        display: block;
+        padding: 5px $spacing-unit 0 13px;
+        border: none;
+      }
+    }
+    &:first-child {
+      border-top: $base-border;
+    }
+    span {
+      display: block;
+      &.title {
+        font-family: $title-font-family;
+      }
+      &.description {
+        font-size: $small-font-size;
+        color: $brand-color;
+      }
+    }
+  }
+  section.sidebar-other {
+    padding: 10px 13px;
+    h4 {
+      font-family: $title-font-family;
+      font-weight: $base-font-weight;
+    }
+    ul {
+      font-size: $small-font-size;
+      font-family: $title-font-family;
+    }
+  }
+}
+
+@include media-query($on-tablet) {
+  .mobile-header.site-header {
+    display: block;
+  }
+  aside#sidebar {
+    display: block;
+    position: fixed;
+    width: 250px;
+    max-width: 80vw;
+    z-index: 2;
+    height: 100vh;
+    left: -250px;
+    transition: left 0.3s;
+    top: 0;
+    border-right: 3px solid $base-border-color;
+    background-color: $text-background-color-med;
+    header {
+      display: none;
+    }
+    &:target, &.open {
+      left: 0;
+      box-shadow: 0 0 5px #000;
+      transition: left 0.3s;
+    }
+    section.mobile-controls {
+      display: block;
+      padding: 5px 13px;
+      font-family: $title-font-family;
+
+      a.close-button {
+        font-size: 18px;
+        display: block;
+        padding: 5px 13px;
+        span { float: right; }
+      }
+
+      .shadow-wrapper {
+        overflow: hidden;
+        padding: 5px 5px 0 5px;
+        position: absolute;
+        right: -59px;
+        transform: rotate(90deg);
+        top: $spacing-unit * 2;
+      }
+      a.menu-button {
+        font-family: $base-font-family;
+        font-size: $large-font-size;
+        display: block;
+        padding: 10px;
+        border: 3px solid $base-border-color;
+        border-bottom: none;
+        box-shadow: 0 0 5px #000;
+        line-height: 14px;
+        border-radius: 6px 6px 0 0;
+        background-color: $text-background-color-med;
+      }
+    }
+  }
+  .main-content {
+    padding-left: 0;
+  }
+  .wrapper {
+    padding: 0;
+  }
+  article.post {
+    border-left: none;
+  }
+  div.half-width {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    max-width: 100%;
+  }
+}
+
+/**
+ * Wayfinding page
+ */
+
+.wayfinding-block {
+  @extend %clearfix;
+  display: table-row;
+  & + .wayfinding-block {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+}
+.wayfinding-choices, .wayfinding-results {
+  width: 50%;
+  display: table-cell;
+  @extend %clearfix;
+  font-size: $small-font-size;
+}
+.wayfinding-choices {
+  padding-right: $spacing-unit/2;
+}
+.wayfinding-results {
+  padding-left: $spacing-unit/2;
+  .li-date {
+    font-family: $title-font-family;
+  }
+}
+.wayfinding-section {
+  display: none;
+  &:target, &.chosen {
+    display: block;
+    position: sticky;
+    top: 0;
+  }
+  &.chosen ~ .wayfinding-section:target {
+    display: none;
+  }
+}
+h2.opener {
+  font-family: $title-font-family;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: $pale-pop-color;
+  text-shadow: 1px 1px rgba(0,0,0,.5);
+  position: relative;
+  z-index: 1;
+  span {
+    background-color: $brand-color-dark;
+    padding: 0 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px 2px #000;
+  }
+  &:before {
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    z-index: -1;
+  }
+}
+.calendar.closed {
+  display: none;
+}
+
+ul.calendar {
+  margin: 15px 5px 10px 5px;
+  position: relative;
+  height: 10em;
+}
+ul.calendar li {
+  display: inline-block;
+  width: 31%;
+  position: absolute;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $text-background-color-dark;
+  font-family: $title-font-family;
+  a {
+    color: $pale-pop-color;
+  }
+}
+li.nov, li.aug, li.may, li.feb {
+  left: 34.5%;
+}
+li.mar, li.jun, li.sep, li.dec {
+  left: 69%;
+}
+
+li.apr, li.may, li.jun {
+  top: 25%;
+}
+
+li.jul, li.aug, li.sep {
+  top: 50%;
+}
+
+li.oct,li.nov,li.dec {
+  top: 75%;
+}
+
+/**
+ * Some leftovers that need tidying up
+ */
+
+.post-content {
+  padding-bottom: $spacing-unit;
+
+  h2 {
+    font-size: 21px;
+
+    @include media-query($on-tablet) {
+      font-size: 19px;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+
+    @include media-query($on-tablet) {
+      font-size: 14.5px;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: $base-font-weight;
+    font-style: italic;
+    em { font-style: normal; }
+
+    @include media-query($on-tablet) {
+      font-size: 14.5px;
+    }
+  }
+
+  h5 {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+
+    @include media-query($on-tablet) {
+      font-size: 12.5px;
+    }
+  }
+
+  h6 {
+    font-size: 14px;
+    font-feature-settings: "smcp" 1;
+
+    @include media-query($on-tablet) {
+      font-size: 14.5px;
+    }
+  }
+}
+
+/**
+ * Miscellany
+ */
+
+ul.inline-list {
+  margin-left: 0;
+  li {
+    display: inline;
+    & + li:before {
+      content: " · ";
+    }
+  }
+}
+ul.dated-list {
+  margin-left: $spacing-unit/2;
+  text-indent: -$spacing-unit/2;
+  li {
+    display: block;
+  }
+  .li-date {
+    color: $grey-color;
+    &:after {
+      content: " | ";
+    }
+  }
+}
+.button {
+  display: inline-block;
+  background-color: $text-background-color-dark;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  box-shadow: -1px 1px 2px #000;
+  color: $pale-pop-color;
+  cursor: pointer;
+  font-family: $title-font-family;
+  &.button-compact {
+    padding: 2px 8px;
+  }
+}
+.gloss {
+  margin: $spacing-unit/3 auto;
+  line-height: 1.2;
+  td {
+    padding: 0 4px;
+  }
+}
+article.post table {
+  margin: auto;
+}
+.post-list {
+  .post-list-date {
+    font-family: $base-font-family;
+    color: $text-color-dull;
+  }
+  dt {
+    font-weight: $heavy-font-weight;
+    font-family: $title-font-family;
+    font-size: $large-font-size;
+    margin-top: $spacing-unit / 2;
+  }
+  dd {
+    margin-left: $spacing-unit;
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .footnotes, .footnote {
+    display: none;
+  }
+}
+
+
+/**
+ * Pictures
+ */
+.half-width {
+  float: left;
+  width: 46%;
+  margin: 0 2%;
+  a {
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    hyphens: none;
+  }
+  span {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    text-shadow: 0 0 5px #000000;
+    font-size: $base-font-size * 2;
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.4;
+    margin: 5px 10px;
+  }
+}
+
+
+.image-fig {
+  clear: both;
+  display: table;
+  padding: 2px;
+  margin-left:  auto;
+  margin-right: auto;
+  background-color: $text-background-color-med;
+  > a {
+    display: block;
+    position: relative;
+  }
+  figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    padding: $spacing-unit/6 $spacing-unit/4;
+    border-top: 0;
+    margin-top: -1px;
+    background-color: $text-background-color-med;
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.topcaption figcaption {
+    caption-side: top;
+    margin-top: 0;
+    margin-bottom: -1px;
+    border-top: inherit;
+    border-bottom: 0;
+  }
+  &.white img {
+    background-color: #fff;
+  }
+  &.left, &.right {
+    width: 50%;
+  }
+  &.left {
+    float: left;
+    margin: 0 15px 10px 0;
+  }
+  &.right {
+    float: right;
+    margin: 0 0 10px 15px;
+  }
+}
+
+.gallery {
+  &.horizontal {
+    clear: both;
+    @extend %clearfix;
+    .image-fig {
+      max-width: 30%;
+      min-width: 120px;
+      margin-right: 3%;
+      clear: none;
+      float: left;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+    }
+  }
+  &.vertical {
+    display: inline-block;
+    float: right;
+    .image-fig {
+      width: 40%;
+      clear: right;
+      float: right;
+    }
+  }
+
+  .image-fig img {
+    width: 100%;
+  }
+}
+
+
+.image-fig-positioning + .image-fig-positioning {
+    margin-top: $spacing-unit;
+    }
+
+/* having this little overlay turned out to be annoying
+.image-fig a:after {
+  content: "";
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  background: url(/assets/svg/plus.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.7);
+}*/

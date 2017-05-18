@@ -1,0 +1,38 @@
+<header class="site-header" role="banner">
+  <h1 class="site-title"><a href="{{ "/" | relative_url}}">{{ site.title | escape }}</a></h1>
+</header>
+
+<nav>
+  <section class="mobile-controls">
+    <div class="shadow-wrapper"><a class="menu-button" href="#sidebar">Menu</a></div>
+    <a class="close-button" href="#">Close<span>×</span></a>
+  </section>
+  <section class="mainnav">
+    {% for item in site.data.side_menu %}
+    <div class="main-listing">
+      <a href="{{ item.url | relative_url }}">
+        <span class="title">{{ item.title }}</span>
+        {% if item.description %}
+          <span class="description">
+            {{ item.description }}
+          </span>
+        {% endif %}
+      </a>
+      {% for child in item.children %}
+        <a class="child" href="{{ item.url }}{{ child.url | relative_url }}">
+          <span class="title">▸ {{ child.title }}</span>
+          {% if child.description %}
+          <span class="description">
+            {{ child.description }}
+          </span>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+
+
+    {% endfor %}
+  </section>
+</nav>
+
+<img src="/assets/images/design/sign.jpg" alt="The Draw Permaculture Sanctuary - Waters Edge Nursery and Gardens" />

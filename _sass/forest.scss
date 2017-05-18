@@ -1,0 +1,70 @@
+// Define defaults for each variable.
+
+$base-font-family: "Liberation Sans", "Arimo", Helvetica, Arial, sans-serif !default;
+$title-font-family:"PT Serif", Georgia, "Garamond", serif;
+$fancy-font-family:"Solveig Display", "Fanwood", "Californian", "Californian FB", Georgia, serif;
+$mono-font-family: "Consolas", "Menlo", Courier, monospace;
+$base-font-size:   14px !default;
+$base-font-weight: 400 !default;
+$heavy-font-weight:700 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$large-font-size:  $base-font-size * 1.15 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #381d00 !default;
+$text-color-dull:  lighten($text-color, 10%) !default;
+$text-color-bright:darken($text-color, 15%) !default;
+
+$text-background-color:     #edd7bb !default;
+$text-background-color-med: darken($text-background-color, 10%) !default;
+$text-background-color-dark:darken($text-background-color, 20%) !default;
+$footer-background-color:   #001600 !default;
+
+$body-background-color: #20160b;
+$body-background-image: url('/assets/images/design/background2.jpg');
+
+$brown-color:        #331a0a !default;
+$container-background-color: $brown-color;
+$brown-border:       2px solid $brown-color !default;
+$base-border-color:  #d2b48b !default;
+$base-border:        1px solid $base-border-color !default;
+
+$brand-color:        #655900 !default;
+$brand-color-dark:   darken($brand-color, 10%) !default;
+$brand-color-light:  lighten($brand-color, 10%) !default;
+$brand-border-dark:  2px solid $brand-color-dark;
+$pop-color:          #630569 !default;
+$pale-pop-color:     #ececbd !default;
+
+$grey-color:       #555 !default;
+$grey-color-light: lighten($grey-color, 25%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+// Width of the content area
+$content-width:    1000px !default;
+
+$on-palm:          600px !default;
+$on-tablet:        850px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Import partials.
+@import
+  "forest/base",
+  "forest/layout",
+  "forest/monokai"
+  // todo include magnific-popup.css
+;

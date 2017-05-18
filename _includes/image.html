@@ -1,0 +1,10 @@
+<figure class="image-fig {{ include.position }}">
+  <a class="mfp-trigger" href="/assets/images/{{ include.file }}">
+    <img src="/assets/images/{{ include.file | uri_escape }}" />
+  </a>
+  {% if include.caption %}
+     <figcaption>
+         {{ include.caption | markdownify }}
+     </figcaption>
+  {% endif %}
+</figure>

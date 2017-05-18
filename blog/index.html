@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article class="post">
+  {% if site.data.blog_page_stuff.top_picture %}
+  <img class="page-top" src="/assets/images/{{ site.data.blog_page_stuff.top_picture }}" />
+  {% endif %}
+
+<div class="post-container">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">
+      {{ site.data.blog_page_stuff.title }}
+    </h1>
+      {% if site.data.blog_page_stuff.subtitle %}
+      <p class="subtitle">{{ site.data.blog_page.subtitle }}</p>
+      {% endif %}
+  </header>
+  {% if site.data.blog_page_stuff.text %}
+  {{ site.data.blog_page_stuff.text | markdownify | smartify }}
+  {% endif %}
+
+  <dl class="post-list">
+    {% for post in site.posts %}
+      <dt><a href="{{ post.url }}">{{ post.title }}</a> | <small class="post-list-date">{{ post.date | date: "%B %Y" }}</small></dt>
+      <dd>
+        {{ post.excerpt }}
+        <p><strong><a href="{{ post.url }}">Read entire article...</a></strong></p>
+      </dd>
+    {% endfor %}
+  </dl>
+</div>
+</article>

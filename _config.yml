@@ -1,0 +1,42 @@
+title: The Draw
+subtitle: |
+  Waters Edge
+  Nursery & Gardens
+email: the.draw.ps@hotmail.com
+description:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.thedraw.org" # the base hostname & protocol for your site, e.g. http://example.com
+timezone: America/Chicago
+encoding: bom|utf-8
+github: [metadata]
+
+# image URLs. Used in fig.html.
+
+github_username: the-draw
+repository: the-draw/the-draw.github.io
+jquery_version: 3.1.1
+blog_default_top_picture: blog-default-top-picture.jpg
+default_top_picture: blog-default-top-picture.jpg
+authors:
+  nl:
+    name: Nathaniel Larson
+    bio: Nathaniel Larson is a father, brother and husband at The Draw, a land-based community on the south shore of Lake Superior, where he does his best to live a life in service to Gaia.
+  sdg:
+    name: Shyam Gray
+    bio: Shyam Gray is a mother, wife, and farmer-activist. She and Nathaniel Larson co-founded The Draw in 2006.
+
+# Build settings
+markdown: kramdown
+paginate: 7
+paginate_path: /blog/page-:num/
+
+# theme: forest
+gems:
+  # - jekyll-feed
+  - github-pages
+  - jekyll-redirect-from
+  - jekyll-seo-tags
+exclude:
+  - Gemfile
+  - Gemfile.lock
+permalink: /blog/:year/:month/:day/:title

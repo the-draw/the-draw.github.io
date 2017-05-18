@@ -1,0 +1,21 @@
+- title: Waters Edge Nursery
+  url: /nursery
+  description: Trees and plants grown here, available
+- title: Learn Here
+  url: /learn-here
+  description: Internships and permaculture design courses
+  children:
+    - title: Summer PDC
+      url: /summer-courses
+    - title: Winter Courses
+      url: /winter-courses
+- title: Design Services
+  url: /design-services
+  description: Permaculture design consultation
+- title: Writings and Resources
+  url: /blog
+  description: Articles and farm blog
+- title: Photo Gallery
+  url: /gallery
+- title: Contact Us
+  url: /contact
