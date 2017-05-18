@@ -523,6 +523,9 @@ textarea.comment-message {
   float: right;
 }
 aside#sidebar {
+  a {
+    text-decoration: none;
+  }
   width: 225px;
   margin-right: -225px;
   float: left;

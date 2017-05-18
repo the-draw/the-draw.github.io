@@ -36,7 +36,7 @@ $green-border-color: #1f4110 !default;
 $green-border:       2px solid $green-border-color !default;
 $green-border-thin:  1px solid $green-border-color !default;
 $brand-color:        #555 !default;
-$brand-color-dark:   darken($brand-color, 25%) !default;
+$brand-color-dark:   darken($brand-color, 10%) !default;
 $brand-border-dark:  2px solid $brand-color-dark;
 $brand-color-light:  lighten($brand-color, 10%) !default;
 
