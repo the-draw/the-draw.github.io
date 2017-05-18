@@ -590,13 +590,14 @@ aside#sidebar {
     top: 0;
     border-right: 3px solid $base-border-color;
     background-color: $text-background-color-med;
-    header {
+    header, #sidebar-sign {
       display: none;
     }
     &:target, &.open {
       left: 0;
       box-shadow: 0 0 5px #000;
       transition: left 0.3s;
+      overflow-y: auto;
     }
     section.mobile-controls {
       display: block;
