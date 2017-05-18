@@ -24,7 +24,7 @@ are interested in helping create diverse and productive self maintaining landsca
 + Many varieties of Red and Black Currants as well as Gooseberries, Rugosa Rose, Elderberries.
 + Many blueberries, both lowbush and highbush, and many species of Cranberries.
 + Paw paws and persimmons.
-+ And many species and varieties of **arctic-hardy KIWI!**
++ And many species and varieties of arctic-hardy kiwi.
 
 ### Nuts:
 
