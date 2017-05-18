@@ -20,4 +20,4 @@ Phone: (715) 779-0155\\
 
 Look for our sign:
 
-{% include image.html file="design/sign.jpg" %}
+{% include image.html file="sign.jpg" %}
