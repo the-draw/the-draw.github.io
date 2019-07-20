@@ -7,10 +7,10 @@ top_picture: nat-driving-team.jpg
 ## The Draw is located at:
 
 34320 Old County K\\
-Bayfield, Wisconsin 54814\\
+Bayfield, Wisconsin 54814
 
 Phone: (715) 779-0155\\
-​Email: info@thedraw.org
+Email: the.draw.ps@hotmail.com
 
 ## Directions
 

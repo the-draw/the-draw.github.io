@@ -11,7 +11,7 @@ We use only biological controls attempting to create cultivated ecosystem. In ou
 
 ## Plants
 
-We are excited to provide healthy and unique multiple use plants.  We
+We are excited to provide healthy and unique multiple-use plants.  We
 are interested in helping create diverse and productive self maintaining landscapes.  To that end we offer the following species.
 
 ### Fruit:
@@ -43,7 +43,9 @@ We are nuts about nuts and think that any decent civilization must be founded on
 + Popcorn Shrub
 + And lots and lots of oaks.
 
-### Groundcovers: Our groundcovers are selected to provide multiple functions.
+### Groundcovers
+
+Our groundcovers are selected to provide multiple functions.
 
 + Bearberry
 + Wild Ginger
