@@ -34,4 +34,7 @@ Cost: $75 or one day work trade[^1]
 
 Lunch and dinner will be provided as an option on both days for winter courses. Five dollars is asked for each meal.
 
+{% include image.html file="white-river-site.jpg" %}
+
+
 [^1]: We will select specific work-trade days in spring and summer. If either of the dates do not work for someone we can individually arrange a day with them.  Work could prove to be educational and fun!
